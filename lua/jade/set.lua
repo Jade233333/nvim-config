@@ -26,7 +26,6 @@ vim.o.termguicolors = true
 
 vim.o.scrolloff = 10
 vim.o.signcolumn = "yes"
-vim.o.isfname:append("@-@")
 
 vim.o.updatetime = 50
 
