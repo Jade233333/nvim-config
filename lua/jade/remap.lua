@@ -10,7 +10,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set({ "n", "x" }, "j", "gj")
 vim.keymap.set({ "n", "x" }, "k", "gk")
 
-vim.keymap.set("n", "<leader>fm", function()
+vim.keymap.set("n", "<leader>m", function()
     vim.lsp.buf.format({ async = true })
 end)
 
