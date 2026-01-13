@@ -6,7 +6,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd('FileType', {
-    pattern = { 'c', 'markdown', 'lua', 'python' },
+    pattern = { 'c', 'markdown', 'lua', 'python', 'bash' },
     callback = function()
         vim.treesitter.start()
     end,
