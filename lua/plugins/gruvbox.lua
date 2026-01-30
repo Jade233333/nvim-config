@@ -8,7 +8,7 @@ return {
       -- contrast = "hard", -- key line
       -- transparent_mode = true, -- optional (matches terminal bg)
     })
-    vim.cmd.colorscheme("gruvbox")
+    -- vim.cmd.colorscheme("gruvbox")
   end,
 }
 
