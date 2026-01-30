@@ -18,3 +18,17 @@ vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], {
     noremap =
         true
 })
+
+vim.keymap.set(
+  "n",
+  "<leader>d",
+  vim.diagnostic.open_float,
+  { desc = "Show diagnostics under cursor" }
+)
+
+vim.keymap.set(
+  "n",
+  "<leader>e",
+  ":e<CR>",
+  { desc = "reload file" }
+)
