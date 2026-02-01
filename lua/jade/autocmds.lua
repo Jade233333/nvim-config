@@ -1,5 +1,5 @@
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "markdown",
+    pattern = {"markdown", "typst"},
     callback = function()
         vim.opt_local.wrap = true
     end,

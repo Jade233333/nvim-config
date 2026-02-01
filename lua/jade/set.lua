@@ -24,7 +24,7 @@ vim.o.smartcase = true
 
 vim.o.termguicolors = true
 
-vim.o.scrolloff = 10
+vim.o.scrolloff = 4
 vim.o.signcolumn = "yes"
 
 vim.o.updatetime = 50
