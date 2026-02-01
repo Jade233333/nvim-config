@@ -2,7 +2,7 @@
 require("jade.remap")
 require("jade.lazy")
 require("jade.set")
-require("jade.autocmds")
+require("jade.filetypeset")
 require("jade.lsp")
 require("jade.commands")
 require("jade.colorscheme")
