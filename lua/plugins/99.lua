@@ -12,7 +12,7 @@ return
         local basename = vim.fs.basename(cwd)
 
         _99.setup({
-            model = "opencode/qwen3-coder",
+            model = "opencode/claude-sonnet-4-5",
 
             -- logger = {
             --     level = _99.DEBUG,
