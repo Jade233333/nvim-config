@@ -69,7 +69,7 @@ return
         -- technically whatever your last visual selection is, will be used
         -- so i have this set to visual mode so i dont screw up and use an
         -- old visual selection
-        --
+
         -- likely ill add a mode check and assert on required visual mode
         -- so just prepare for it now
         vim.keymap.set("v", "<leader>99", function()
