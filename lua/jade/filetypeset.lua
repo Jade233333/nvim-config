@@ -1,13 +1,6 @@
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = {"markdown", "typst"},
+    pattern = {"typst"},
     callback = function()
         vim.opt_local.wrap = true
-    end,
-})
-
-vim.api.nvim_create_autocmd('FileType', {
-    pattern = { 'c', 'markdown', 'lua', 'python', 'bash' },
-    callback = function()
-        vim.treesitter.start()
     end,
 })
