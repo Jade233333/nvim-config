@@ -10,7 +10,10 @@ return
         -- logging mechanisms within 99.  This is for more debugging purposes
         local cwd = vim.uv.cwd()
         local basename = vim.fs.basename(cwd)
+
         _99.setup({
+            model = "opencode/qwen3-coder",
+
             -- logger = {
             --     level = _99.DEBUG,
             --     path = "/tmp/" .. basename .. ".99.debug",
