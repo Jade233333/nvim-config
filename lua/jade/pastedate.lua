@@ -6,7 +6,7 @@ end
 
 vim.keymap.set(
     { "n" },
-    "<leader>r",
+    "<leader>t",
     insert_shell_date,
     { desc = "Insert `date` output at cursor" }
 )
