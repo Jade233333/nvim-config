@@ -4,5 +4,5 @@ local function open_current_file()
 end
 
 vim.keymap.set('n', '<leader><CR>', open_current_file, {
-  desc = 'Open current file',
+  desc = 'use system open command to open current file',
 })
