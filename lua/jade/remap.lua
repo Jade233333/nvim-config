@@ -14,10 +14,12 @@ vim.keymap.set("n", "<leader>m", function()
     vim.lsp.buf.format({ async = true })
 end)
 
-vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], {
+vim.keymap.set("t", "<leader><Esc>", [[<C-\><C-n>]], {
     noremap =
         true
 })
+
+-- vim.keymap.set("n", "<leader>s", ":term<CR>")
 
 vim.keymap.set(
   "n",
