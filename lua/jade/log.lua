@@ -13,4 +13,7 @@ vim.keymap.set("n", "<leader>e", function()
 
   -- open file
   vim.cmd("edit " .. file_path)
+
+  -- last line
+  vim.cmd("normal! G")
 end, { desc = "Open daily log" })
