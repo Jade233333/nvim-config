@@ -23,14 +23,14 @@ vim.keymap.set("t", "<leader><Esc>", [[<C-\><C-n>]], {
 
 vim.keymap.set(
   "n",
-  "<leader>d",
+  "<lea:er>d",
   vim.diagnostic.open_float,
   { desc = "Show diagnostics under cursor" }
 )
 
 vim.keymap.set(
   "n",
-  "<leader>e",
+  "<leader>r",
   ":e<CR>",
   { desc = "reload file" }
 )
