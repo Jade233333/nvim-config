@@ -23,7 +23,7 @@ vim.keymap.set("t", "<leader><Esc>", [[<C-\><C-n>]], {
 
 vim.keymap.set(
   "n",
-  "<lea:er>d",
+  "<leader>d",
   vim.diagnostic.open_float,
   { desc = "Show diagnostics under cursor" }
 )
