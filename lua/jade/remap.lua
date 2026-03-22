@@ -10,23 +10,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set({ "n", "x" }, "j", "gj")
 vim.keymap.set({ "n", "x" }, "k", "gk")
 
-vim.keymap.set("n", "<leader>m", function()
-    vim.lsp.buf.format({ async = true })
-end)
-
-vim.keymap.set("t", "<leader><Esc>", [[<C-\><C-n>]], {
-    noremap =
-        true
-})
-
 -- vim.keymap.set("n", "<leader>s", ":term<CR>")
-
-vim.keymap.set(
-  "n",
-  "<leader>d",
-  vim.diagnostic.open_float,
-  { desc = "Show diagnostics under cursor" }
-)
 
 vim.keymap.set(
   "n",
