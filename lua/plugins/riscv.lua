@@ -6,7 +6,7 @@ return {
             pattern = "riscv_asm",
             callback = function()
                 vim.g.riscv_asm_all_enable = true
-                -- vim.bo.commentstring = "# %s"
+                vim.bo.commentstring = "# %s"
             end,
         })
     end,
