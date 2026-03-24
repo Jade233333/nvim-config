@@ -10,6 +10,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set({ "n", "x" }, "j", "gj")
 vim.keymap.set({ "n", "x" }, "k", "gk")
 
--- vim.keymap.set("t", "<leader><Esc>", [[<C-\><C-n>]])
+vim.keymap.set("t", "<C-q>", [[<C-\><C-n>]])
 --
 -- vim.keymap.set("n", "<leader>s", ":term<CR>")
