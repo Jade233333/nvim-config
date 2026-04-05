@@ -24,7 +24,7 @@ end
 
 -- Open daily log file
 local function open_daily_log()
-    local log_dir = vim.fn.expand("~/r1j1/log")
+    local log_dir = vim.fn.expand("~/jia/log")
     local date = os.date("%Y-%m-%d")
     local file_path = log_dir .. "/" .. date .. ".md"
 
@@ -42,7 +42,7 @@ local function open_daily_log()
 end
 
 local function open_todo_file()
-    local file_path = vim.fn.expand("~/r1j1/todo.md")
+    local file_path = vim.fn.expand("~/jia/todo.md")
     vim.cmd("edit " .. file_path)
 end
 
@@ -57,7 +57,7 @@ end
 
 -- Open riji file
 local function open_riji_file()
-    local riji_dir = vim.fn.expand("~/r1j1/riji")
+    local riji_dir = vim.fn.expand("~/jia/riji")
     local year = os.date("%Y")
     local month = os.date("%m")
     local year_month = year .. "年" .. month .. "月"
