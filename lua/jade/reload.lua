@@ -1,6 +1,6 @@
 vim.keymap.set(
   "n",
-  "<leader>r",
+  "<leader>e",
   ":e<CR>",
   { desc = "reload file" }
 )

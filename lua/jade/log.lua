@@ -1,11 +1,10 @@
 -- Intro
--- leader e to create a daily log file in log/ folder
+-- leader rl to create a daily log file in log/ folder
 -- auto name the file with date
 -- auto generate h1 with date
--- auto generate h2 with system "date" command every time called
---
--- Todo
--- 1. replace system date with lua function
+-- auto generate h2 with lua date function every time called
+-- leader rt to open the todo.md file
+-- leader rr to open the 日记
 
 -- Create new daily log file if it doesn't exist
 local function create_new_log_file(file_path, date)
@@ -18,7 +17,7 @@ end
 
 -- copy of the function from time.lua
 local function insert_markdown_h2_date()
-    local time = vim.fn.system("date"):gsub("%s+$", "")
+    local time = os.date("%a %b %e %H:%M:%S %Z %Y")
     vim.cmd("normal! i## " .. time .. "\n")
     vim.cmd("normal! o")
 end
@@ -42,4 +41,41 @@ local function open_daily_log()
     insert_markdown_h2_date()
 end
 
-vim.keymap.set("n", "<leader>e", open_daily_log, { desc = "Open daily log" })
+local function open_todo_file()
+    local file_path = vim.fn.expand("~/r1j1/todo.md")
+    vim.cmd("edit " .. file_path)
+end
+
+-- Create new riji file if it doesn't exist
+local function create_new_riji_file(file_path, year_month)
+    if vim.fn.filereadable(file_path) == 0 then
+        local header = string.format("# 日记 %s", year_month)
+        vim.fn.writefile({ header }, file_path, "b")
+        -- passing b to avoid empty line
+    end
+end
+
+-- Open riji file
+local function open_riji_file()
+    local riji_dir = vim.fn.expand("~/r1j1/riji")
+    local year = os.date("%Y")
+    local month = os.date("%m")
+    local year_month = year .. "年" .. month .. "月"
+    local file_path = riji_dir .. "/日记" .. year_month .. ".md"
+
+    -- ensure directory exists
+    vim.fn.mkdir(riji_dir, "p")
+
+    -- create file if it doesn't exist
+    create_new_riji_file(file_path, year_month)
+
+    vim.cmd("edit " .. file_path)
+    vim.cmd("normal! G")
+    vim.cmd("normal! 2o")
+
+    insert_markdown_h2_date()
+end
+
+vim.keymap.set("n", "<leader>rr", open_riji_file, { desc = "Open riji" })
+vim.keymap.set("n", "<leader>rl", open_daily_log, { desc = "Open daily log" })
+vim.keymap.set("n", "<leader>rt", open_todo_file, { desc = "Open daily log" })
