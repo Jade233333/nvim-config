@@ -1,10 +1,10 @@
 -- Intro
--- leader rl to create a daily log file in log/ folder
+-- leader jl to create a daily log file in log/ folder
 -- auto name the file with date
 -- auto generate h1 with date
 -- auto generate h2 with lua date function every time called
--- leader rt to open the todo.md file
--- leader rr to open the 日记
+-- leader jt to open the todo.md file
+-- leader jr to open the 日记
 
 -- Create new daily log file if it doesn't exist
 local function create_new_log_file(file_path, date)
@@ -76,6 +76,6 @@ local function open_riji_file()
     insert_markdown_h2_date()
 end
 
-vim.keymap.set("n", "<leader>rr", open_riji_file, { desc = "Open riji" })
-vim.keymap.set("n", "<leader>rl", open_daily_log, { desc = "Open daily log" })
-vim.keymap.set("n", "<leader>rt", open_todo_file, { desc = "Open daily log" })
+vim.keymap.set("n", "<leader>jr", open_riji_file, { desc = "Open riji" })
+vim.keymap.set("n", "<leader>jl", open_daily_log, { desc = "Open daily log" })
+vim.keymap.set("n", "<leader>jt", open_todo_file, { desc = "Open daily log" })
