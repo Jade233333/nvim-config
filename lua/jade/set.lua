@@ -1,3 +1,5 @@
+-- Intro
+-- config file for vim native configs
 vim.o.nu = true
 vim.o.relativenumber = true
 
@@ -30,8 +32,6 @@ vim.o.scrolloff = 4
 vim.o.signcolumn = "yes"
 
 vim.o.updatetime = 50
-
-vim.g.mapleader = " "
 
 vim.o.clipboard = "unnamedplus"
 vim.o.laststatus = 0
