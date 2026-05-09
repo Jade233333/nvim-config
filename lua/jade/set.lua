@@ -32,6 +32,5 @@ vim.o.scrolloff = 4
 vim.o.signcolumn = "yes"
 
 vim.o.updatetime = 50
-
 vim.o.clipboard = "unnamedplus"
 vim.o.laststatus = 0
