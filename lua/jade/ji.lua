@@ -4,7 +4,7 @@
 -- auto generate h1 with date
 -- auto generate h2 with lua date function every time called
 -- leader jt to open the todo.md file
--- leader jr to open the 日记
+-- leader jm to open the mirror (monthly)
 
 -- Create new daily log file if it doesn't exist
 local function create_new_log_file(file_path, date)
@@ -46,28 +46,26 @@ local function open_todo_file()
     vim.cmd("edit " .. file_path)
 end
 
--- Create new riji file if it doesn't exist
-local function create_new_riji_file(file_path, year_month)
+-- Create new mirror file if it doesn't exist
+local function create_new_mirror_file(file_path, year_month)
     if vim.fn.filereadable(file_path) == 0 then
-        local header = string.format("# 日记 %s", year_month)
+        local header = string.format("# Mirror %s", year_month)
         vim.fn.writefile({ header }, file_path, "b")
         -- passing b to avoid empty line
     end
 end
 
--- Open riji file
-local function open_riji_file()
-    local riji_dir = vim.fn.expand("~/ji/riji")
-    local year = os.date("%Y")
-    local month = os.date("%m")
-    local year_month = year .. "年" .. month .. "月"
-    local file_path = riji_dir .. "/日记" .. year_month .. ".md"
+-- Open mirror file
+local function open_mirror_file()
+    local mirror_dir = vim.fn.expand("~/ji/mirror")
+    local year_month = os.date("%Y%m")
+    local file_path = mirror_dir .. "/" .. year_month .. ".md"
 
     -- ensure directory exists
-    vim.fn.mkdir(riji_dir, "p")
+    vim.fn.mkdir(mirror_dir, "p")
 
     -- create file if it doesn't exist
-    create_new_riji_file(file_path, year_month)
+    create_new_mirror_file(file_path, year_month)
 
     vim.cmd("edit " .. file_path)
     vim.cmd("normal! G")
@@ -76,6 +74,6 @@ local function open_riji_file()
     insert_markdown_h2_date()
 end
 
-vim.keymap.set("n", "<leader>jr", open_riji_file, { desc = "Open riji" })
+vim.keymap.set("n", "<leader>jm", open_mirror_file, { desc = "Open mirror" })
 vim.keymap.set("n", "<leader>jl", open_daily_log, { desc = "Open daily log" })
 vim.keymap.set("n", "<leader>jt", open_todo_file, { desc = "Open daily log" })

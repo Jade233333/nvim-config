@@ -14,7 +14,7 @@ Neovim config in Lua. Entry: `init.lua` → `lua/jade/init.lua`, loads modules i
 6. `lua/jade/colorscheme.lua` — gruvbox colorscheme
 7. `lua/jade/filetype.lua` — wrap for typst/markdown
 8. `lua/jade/localopen.lua` — `<leader><CR>` opens file via macOS `open`
-9. `lua/jade/jia.lua` — journal keymaps: `<leader>jl` (daily log), `<leader>jt` (todo), `<leader>jr` (日记/riji); files in `~/jia/`
+9. `lua/jade/ji.lua` — journal keymaps: `<leader>jl` (daily log), `<leader>jt` (todo), `<leader>jm` (mirror); files in `~/ji/`
 10. `lua/jade/format.lua` — `<leader>m` triggers LSP format
 12. `lua/jade/diagnostics.lua` — `<leader>dd` float diagnostics, `<leader>df` code actions
 13. `lua/jade/refresh.lua` — `<leader>r` reloads file (`:e<CR>`)
@@ -48,7 +48,7 @@ Each file returns lazy.nvim plugin spec. Key plugins:
 | `<leader>df` | Code action |
 | `<leader>r` | Reload file |
 | `<leader>99` | 99 AI visual action |
-| `<leader>jl/jt/jr` | Journal/log/riji |
+| `<leader>jl/jt/jm` | Journal/log/mirror |
 
 ## Adding New Functionality
 
