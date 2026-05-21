@@ -5,6 +5,8 @@ vim.opt.foldlevel = 99
 vim.api.nvim_create_autocmd('FileType', {
     pattern = {
         'lua',
+        'vim',
+        'vimdoc',
         'bash',
         'sh',
         'python',
