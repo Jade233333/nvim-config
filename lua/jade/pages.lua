@@ -35,7 +35,8 @@ end
 local function insert_markdown_h2_date()
     local time = os.date("%a %b %e %H:%M:%S %Z %Y")
     vim.cmd("normal! i## " .. time .. "\n")
-    vim.cmd("normal! o")
+    vim.cmd("normal! 2o")
+    vim.cmd("normal! k")
 end
 
 -- Open daily log file
