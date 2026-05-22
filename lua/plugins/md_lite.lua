@@ -1,3 +1,4 @@
 return {
-  dir = "~/Developer/md-lite.nvim",
+    "Zhou-Xuanyu/md-lite.nvim",
+    ft = "markdown",
 }
